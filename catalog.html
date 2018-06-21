@@ -33,7 +33,7 @@
 					</form>
 					<hr>
 					<div class="categories_money">
-						<h2>Категории</h2>
+						<h2 class="categories_h2">Категории</h2>
 						<ul class="categories_list">
 							<li>Все</li>
 							<li>Кухня</li>
@@ -43,8 +43,17 @@
 							<li>Другое</li>
 						</ul>
 					</div>
+					<div class="categories_size">
+						<h2 class="categories_h2">Размер</h2>
+						<select name="" id="">
+							<option value="">300x150</option>
+							<option value="">450x250</option>
+							<option value="">300x300</option>
+						</select>
+						<span>см</span>
+					</div>
 					<div class="categories_money">
-						<h2>Цена</h2>
+						<h2 class="categories_h2">Цена</h2>
 						<input class="input_money min_money" type="text" name="">
 						<input class="input_money max_money" type="text" name="">
 						<input class="range_money" type="range" min="0" max="10000" name="money" value="1500">
@@ -54,12 +63,15 @@
 						<button class="button">Очистить фильтр</button>
 					</div>
 					<div class="info_mail">
-						<h2>Получать информацию о новых моделях</h2>
+						<h2 class="categories_h2">Получать информацию о новых моделях</h2>
 						<input type="login" name="">
 						<input type="submit" name="" value="Подписаться">
 					</div>
 				</div>
 				<div class="products">
+					<div>
+						<h2>Каталог</h1>
+					</div>
 					<div class="products_sort">
 						<span>Сортировать</span>
 						<select>
@@ -74,16 +86,20 @@
 							<img src="image/sovremennye-shtory-na-kuhnyu.jpg">
 						</div>
 						<div>
-							<span>
+							<p class="product_span_size">
 								Размер: 300x260 см.
-							</span>
+							</p>
 						</div>
 						<div>
 							<hr>
 							<p>ЦЕНА: 1566 руб.</p>
 							<hr>
 						</div>
-						<button class="button_pay">КУПИТЬ</button>
+						<div>
+							<p class="product_availability"><img class="product_availability_img" src="image/green-yes.png" alt="yes">В наличии</p>
+							<button class="product_button_show"></button>
+							<button class="product_button_buy"></button>
+						</div>
 					</div>
 					<div class="product">
 						<h3>Кухня "Афродита"</h3>
@@ -91,16 +107,20 @@
 							<img src="image/sovremennye-shtory-na-kuhnyu.jpg">
 						</div>
 						<div>
-							<span>
+							<p class="product_span_size">
 								Размер: 300x260 см.
-							</span>
+							</p>
 						</div>
 						<div>
 							<hr>
 							<p>ЦЕНА: 1566 руб.</p>
 							<hr>
 						</div>
-						<button class="button_pay">КУПИТЬ</button>
+						<div>
+							<p class="product_availability"><img class="product_availability_img" src="image/green-yes.png" alt="yes">В наличии</p>
+							<button class="product_button_show"></button>
+							<button class="product_button_buy"></button>
+						</div>
 					</div>
 					<div class="product">
 						<h3>Кухня "Афродита"</h3>
@@ -108,18 +128,21 @@
 							<img src="image/sovremennye-shtory-na-kuhnyu.jpg">
 						</div>
 						<div>
-							<span>
+							<p class="product_span_size">
 								Размер: 300x260 см.
-							</span>
+							</p>
 						</div>
 						<div>
 							<hr>
 							<p>ЦЕНА: 1566 руб.</p>
 							<hr>
 						</div>
-						<button class="button_pay">КУПИТЬ</button>
+						<div>
+							<p class="product_availability"><img class="product_availability_img" src="image/green-yes.png" alt="yes">В наличии</p>
+							<button class="product_button_show"></button>
+							<button class="product_button_buy"></button>
+						</div>
 					</div>
-					
 				</div>
 				<div class="number_list">
 					<a class="number_list_link" href=""><</a>
