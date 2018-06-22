@@ -4,6 +4,7 @@ body
 	background-color: #e8e9fa;
 	margin: 0;
 	font-family: 'Arial', sans-serif;
+	position: relative;
 }
 
 
@@ -12,8 +13,17 @@ body
 	font-family: 'Lobster', cursive;
 }
 
+
+.h1_section
+{
+	font-family: 'Lobster', cursive;
+	margin-left: 20px;
+	font-size: 25px; 
+}
+
 header
 { 	
+	z-index: 1;
 	background-color: #3565a5;
 	width: 100%;
 	height: 60px;
@@ -103,6 +113,8 @@ header
 .content
 {
 	margin-top: 70px;
+	padding-bottom: 250px;
+	min-height: 100%;
 }
 
 .container_footer
@@ -177,10 +189,10 @@ header
 .categories_money
 {
 	background-color: white;
-	border-top: 2px solid #999999;
-	//border-radius: 5px;
+	border: 1px solid #999999;
+	border-radius: 2px;
 	padding: 10px;
-	//margin-top: 10px; 
+	margin-top: 20px; 
 }
 .range_money
 {
@@ -262,14 +274,25 @@ header
 {
 	float: left;
 	margin-top: 20px;
-	margin-left: 15px; 
+	margin-left: 20px; 
+	
 	width: 350px;
 	height: 410px;
 	background-color: white;
 	border-top: 5px solid #3565a5;
+	border-left: 1px solid #999999;
+	border-right:  1px solid #999999;
+	border-bottom: 1px solid #999999;
 	padding-left: 10px;
 	padding-right:  10px;
 
+}
+
+
+.product:hover
+{
+	background-color: #e8ecff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
 
 .product_img img
@@ -280,13 +303,30 @@ header
 }
 .products_sort
 {
-	padding: 15px;
+	padding: 10px;
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
 
 	margin-top: 20px;
-	margin-left: 15px;
+	margin-left: 20px;
 }
+
+/*select*/
+.products_sort select 
+{
+	margin-left: 5px;
+  	width: 250px;
+  	height: 30px;
+  	border: none;
+	border-bottom: 2px solid #3565a5;
+	border-radius: 2px;
+	background-color: transparent; 
+	font-family: 'Arial';
+	font-size: 15;
+	outline: none;
+}
+
+/*select*/
 
 .button_pay
 {
@@ -333,9 +373,22 @@ header
 	border: 1px solid gray;
 	height: 30px;
 	width: 30px;
-	background: url(image/eye.png) no-repeat;
-	background-size: 28px;
+	background-color: #3565a5; 
+	background-position: 3px center; 
+	background-image: url(image/eye.png);
+	background-repeat: no-repeat;
+	background-size: 20px;
 	float: right;
+}
+
+.product_button_show:hover
+{
+	background-color: white; 
+}
+
+.product_button_buy:hover
+{
+	background-color: white; 
 }
 
 .product_button_buy
@@ -344,8 +397,11 @@ header
 	border: 1px solid gray;
 	height: 30px;
 	width: 30px;
-	background: url(image/buy.png) no-repeat;
-	background-size: 26px;
+	background-color: #3565a5; 
+	background-position: 3px center; 
+	background-image: url(image/buy.png);
+	background-repeat: no-repeat;
+	background-size: 20px;
 	padding: 5px;
 	float: right;
 }
@@ -363,8 +419,9 @@ header
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border: 1px solid #eaeaea;
+	border: 1px solid gray;
 	text-decoration: none;
+	 
 	font-size: 25px;
 }
 
@@ -396,6 +453,7 @@ footer
 	width: 100%;
 	position: absolute;
 	background-color: #bac6d8;
+	bottom: 0;
 }
 
 footer p
@@ -414,6 +472,74 @@ footer p
 .content_img
 {
 	width: 100%;
+}
+
+
+.content_shtora
+{
+	margin-top: 20px;
+	width: 100%;
+	background-color: white;
+	border-top: 5px solid #3565a5;
+	border-left: 1px solid #999999;
+	border-right:  1px solid #999999;
+	border-bottom: 1px solid #999999;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.back_link
+{
+	margin-left: 0;
+	background: rgb(173, 208, 247);
+	position: relative; /* !!! */
+   	padding: 5px;
+   	width: 100px;
+   	text-align: center;
+   	border-left:   1px solid gray;
+}
+
+.back_link:before
+{
+	content: '';
+   	border: 14px solid transparent;
+   	border-left: 15px solid rgb(173, 208, 247);
+   	position: absolute;
+   	right: -28px;
+   	top: 50%;
+   	margin-top:-14px; 
+}
+
+
+
+
+.product_shtora
+{
+	display: inline-block;
+}
+
+.product_shtora_picture
+{
+	float: left;
+	background-color: blue;
+}
+
+.product_shtora_picture img
+{
+	height: 300px;
+	width: 400px;
+	border: 1px solid gray;
+}
+
+.product_shtora_characteristics
+{
+	margin-left: 10px;
+	float: right;
+}
+
+.product_shtora_characteristics p
+{
+	border-bottom: 1px solid gray;
 }
 
 @media (max-width: 680px) 
@@ -449,16 +575,18 @@ form {
   height: 42px;
   border: none;
   background: #3565a5;
-  background-image: url(image/eye.png);
-  background-size: 30px;
+  background-position: 8px center;
+  background-image: url(image/search.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 .button_search:before {
-  background: url(image/eye.png) no-repeat 50% 50%;
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
 }
 
 /*/input-search*/
+

@@ -15,3 +15,8 @@ window.onscroll = function()
   	//alert('height_scroll='+height_scroll+'  height_client='+height_client+'  scrolled='+scrolled +'   height='+height);
   	document.getElementById('line_scroll').style.width =  scrolled/(document.documentElement.body.style.height-height_client)+'px';
 }
+
+function showDialogWindow(id)
+{
+	alert(id.name);
+}
